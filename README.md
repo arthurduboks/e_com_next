@@ -1,4 +1,4 @@
-# Next.js e-Commerce Store 🛍️
+# 🛍️ Next.js e-Commerce Store
 
 This is my personal project, Next.js e-Commerce Store, built using Next.js and bootstrapped with `create-next-app`. The store showcases a clean, reactive, and customizable mobile-first UI.
 

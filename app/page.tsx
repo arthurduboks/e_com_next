@@ -1,5 +1,6 @@
 import Stripe from "stripe";
 import Product from "./components/Product";
+import Footer from "./components/Footer";
 
 const getProducts = async () => {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
@@ -29,10 +30,13 @@ export default async function Home() {
   const products = await getProducts();
   console.log(products);
   return (
-    <main className="grid grid-cols-fluid gap-16">
-      {products.map((product) => (
-        <Product {...product} />
-      ))}
-    </main>
+    <div className="flex flex-col min-h-screen">
+      <main className="grid grid-cols-fluid gap-16">
+        {products.map((product) => (
+          <Product {...product} />
+        ))}
+      </main>
+      <Footer />
+    </div>
   );
 }

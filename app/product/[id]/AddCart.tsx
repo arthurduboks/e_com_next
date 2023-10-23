@@ -1,15 +1,11 @@
 "use client";
+
 import { AddCartType } from "@/types/AddCartType";
 import { useCartStore } from "@/store";
 import { useState } from "react";
 
-export default function AddCart({
-  name,
-  id,
-  image,
-  unit_amount,
-  quantity,
-}: AddCartType) {
+export default function AddCart(props: AddCartType) {
+  const { name, id, image, unit_amount, quantity } = props;
   const cartStore = useCartStore();
   const [added, setAdded] = useState(false);
 
@@ -20,16 +16,15 @@ export default function AddCart({
       setAdded(false);
     }, 500);
   };
+
   return (
-    <>
-      <button
-        onClick={handleAddToCart}
-        disabled={added}
-        className="my-4 btn btn-primary w-full"
-      >
-        {!added && <span>Add to cart</span>}
-        {added && <span>Adding to cart 😀</span>}
-      </button>
-    </>
+    <button
+      onClick={handleAddToCart}
+      disabled={added}
+      className="my-4 btn btn-primary w-full"
+    >
+      {!added && <span>Add to cart</span>}
+      {added && <span>Adding to cart 😀</span>}
+    </button>
   );
 }

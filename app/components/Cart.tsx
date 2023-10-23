@@ -56,7 +56,7 @@ export default function Cart() {
             {cartStore.cart.map((item) => (
               <motion.div
                 layout
-                key={item.id}
+                key={item.id || `${item.name}-${item.unit_amount}`}
                 className="flex p-4 gap-4 bg-base-100 my-4 rounded-lg"
               >
                 <Image

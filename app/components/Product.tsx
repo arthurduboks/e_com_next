@@ -15,7 +15,6 @@ export default function Product({
   metadata,
 }: ProductType) {
   const { features } = metadata;
-  const queryId = id;
 
   return (
     <div>

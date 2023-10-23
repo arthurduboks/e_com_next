@@ -4,7 +4,6 @@ import Image from "next/image";
 import formatPrice from "@/util/PriceFormat";
 import { ProductType } from "@/types/ProductType";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import AddCart from "@/app/product/[id]/AddCart";
 
 export default function Product({
@@ -25,7 +24,7 @@ export default function Product({
         <Link
           href={{
             pathname: `/product/${id}`,
-            query: { name, image, unit_amount, queryId, description, features },
+            query: { name, image, unit_amount, id, description, features },
           }}
         >
           <div>
@@ -47,12 +46,7 @@ export default function Product({
         </Link>
 
         {/* AddCart outside of the clickable div */}
-        <AddCart
-          name={name}
-          image={image}
-          id={queryId}
-          unit_amount={unit_amount}
-        />
+        <AddCart name={name} image={image} id={id} unit_amount={unit_amount} />
       </div>
     </div>
   );

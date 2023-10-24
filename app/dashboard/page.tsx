@@ -64,7 +64,7 @@ export default async function Dashboard() {
                       height={35}
                       alt={product.name}
                       priority={true}
-                      className="w-auto"
+                      className="w-1/2"
                     />
                     <p>{formatPrice(product.unit_amount)}</p>
                     <p>Quantity: {product.quantity}</p>

@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <footer class="bg-white">
+    <footer class="mt-5">
       <div class="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
         <div class="text-center">
           <h2 class="text-3xl font-extrabold text-gray-900 sm:text-5xl">
@@ -15,7 +15,7 @@ const Footer = () => {
           </p> */}
         </div>
 
-        <div class="mt-16 border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24">
+        <div class="mt-12 border-t border-gray-100 pt-2 sm:flex sm:items-center sm:justify-between lg:mt-24">
           <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
             <li>
               <a href="#" class="text-gray-500 transition hover:opacity-75">

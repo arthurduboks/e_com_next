@@ -2,6 +2,7 @@ import "./globals.css";
 import Nav from "./components/Nav";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
+import Footer from "./components/Footer";
 import Hydrate from "./components/Hydrate";
 import { Roboto, Lobster_Two } from "next/font/google";
 
@@ -32,11 +33,12 @@ export default async function RootLayout({
 
   return (
     <html className={`${roboto.variable} ${lobster.variable}`} lang="en">
-      <body className={`mx-4 lg:mx-48 ${roboto.className}`}>
+      <body className={`mx-4 lg:mx-2 ${roboto.className}`}>
         <Hydrate>
           <Nav user={session?.user} expires={session?.expires as string} />
           {children}
         </Hydrate>
+        <Footer />
       </body>
     </html>
   );

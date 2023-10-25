@@ -60,12 +60,13 @@ export default async function Dashboard() {
                   <div className="flex items-baseline gap-4">
                     <Image
                       src={product.image!}
-                      width={35}
-                      height={35}
+                      width={45}
+                      height={45}
                       alt={product.name}
                       priority={true}
-                      className="w-1/2"
                     />
+                  </div>
+                  <div className="flex items-baseline mt-2 gap-2">
                     <p>{formatPrice(product.unit_amount)}</p>
                     <p>Quantity: {product.quantity}</p>
                   </div>

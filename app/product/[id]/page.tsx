@@ -3,6 +3,7 @@ import { SearchParamType } from "@/types/SearchParamType";
 import formatPrice from "@/util/PriceFormat";
 import AddCart from "./AddCart";
 import LiveVisitorCount from "@/app/components/LiveVisitorCount";
+import StarRating from "@/app/components/StarRating";
 
 export default async function Product({ searchParams }: SearchParamType) {
   return (
@@ -17,6 +18,9 @@ export default async function Product({ searchParams }: SearchParamType) {
       />
       <div className="font-medium w-full md:w-1/2 lg:mt-20">
         <h1 className="text-2xl py-2">{searchParams.name}</h1>
+        <div className="pb-2">
+          <StarRating value={4} />
+        </div>
         <p className="font-bold text-primary">
           {searchParams.unit_amount && formatPrice(searchParams.unit_amount)}
         </p>

@@ -5,6 +5,7 @@ import formatPrice from "@/util/PriceFormat";
 import { ProductType } from "@/types/ProductType";
 import Link from "next/link";
 import AddCart from "@/app/product/[id]/AddCart";
+import StarRating from "./StarRating";
 
 export default function Product({
   name,
@@ -37,6 +38,9 @@ export default function Product({
             />
             <div className="font-medium py-2">
               <h1>{name}</h1>
+              <div className="py-2">
+                <StarRating value={4} />
+              </div>
               <h2 className="text-sm text-primary">
                 {unit_amount !== null ? formatPrice(unit_amount) : "N/A"}
               </h2>
